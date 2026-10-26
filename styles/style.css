@@ -1,0 +1,244 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+    color: #fff8e7;
+
+    background: linear-gradient(135deg, #102820, #071610);
+}
+
+/* Painel principal */
+.container {
+    width: 100%;
+    max-width: 750px;
+    padding: 35px 25px;
+    text-align: center;
+
+    background: #183c2d;
+    border: 3px solid #d4a72c;
+    border-radius: 22px;
+    box-shadow: 0 0 30px #0008;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 15px;
+    color: #ffd166;
+    font-size: 2.2rem;
+}
+
+/* Instruções */
+.instrucao {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #f5e9c9;
+}
+
+/* Área dos cofres */
+.cofres {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+/* Botões dos cofres */
+.cofre {
+    width: 165px;
+    min-height: 145px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+    border: 3px solid #d4a72c;
+    border-radius: 15px;
+
+    background: #754c24;
+    color: white;
+
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s,
+        background 0.25s,
+        box-shadow 0.25s;
+}
+
+/* Emoji dos cofres */
+.emoji {
+    font-size: 3.5rem;
+}
+
+/* Efeito ao passar o mouse */
+.cofre:hover:not(:disabled) {
+    transform: translateY(-8px) scale(1.04);
+    background: #95642f;
+    box-shadow: 0 8px 20px #0005;
+}
+
+/* Cofres desativados */
+.cofre:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+/* Cofre premiado */
+.cofre.premiado {
+    background: #187a3b;
+    border-color: #75f29a;
+}
+
+/* Cofre vazio */
+.cofre.vazio {
+    background: #8c2929;
+    border-color: #ff8585;
+}
+
+/* Área do resultado */
+.resultado {
+    min-height: 105px;
+    margin-bottom: 25px;
+    padding: 20px;
+
+    border: 1px solid #b89a4b;
+    border-radius: 12px;
+    background: #102b20;
+}
+
+/* Título do resultado */
+.resultado h2 {
+    margin-bottom: 12px;
+    color: #ffd166;
+    font-size: 1.3rem;
+}
+
+/* Mensagem */
+#mensagem {
+    line-height: 1.5;
+}
+
+/* Placar */
+.placar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* Contadores */
+.contador {
+    flex: 1;
+    max-width: 220px;
+    padding: 18px;
+
+    border-radius: 12px;
+    background: #24533d;
+}
+
+/* Texto dos contadores */
+.contador span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Números dos contadores */
+.contador strong {
+    color: #ffd166;
+    font-size: 2rem;
+}
+
+/* Área dos botões de ação */
+.acoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Botões de ação */
+.botao {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 9px;
+
+    background: #e9b949;
+    color: #192719;
+
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+/* Efeito dos botões */
+.botao:hover {
+    transform: scale(1.04);
+    background: #ffd978;
+}
+
+/* Botão secundário */
+.botao-secundario {
+    background: #e5e5e5;
+}
+
+.botao-secundario:hover {
+    background: #ffffff;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: 25px;
+    color: #d9c99c;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 520px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .cofre {
+        width: 125px;
+    }
+
+    .placar {
+        gap: 10px;
+    }
+
+    .contador {
+        padding: 13px 8px;
+        font-size: 0.9rem;
+    }
+
+    .contador strong {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Cofre Misterioso</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+
+        <h1>🏴‍☠️ O Cofre Misterioso</h1>
+
+        <p class="instrucao">
+            Existem três cofres, mas apenas um guarda o tesouro!
+            Escolha com sabedoria e teste sua sorte.
+        </p>
+
+        <section class="cofres" aria-label="Escolha um cofre">
+
+            <button class="cofre" id="cofre1" data-cofre="1">
+                <span class="emoji">🎁</span>
+                <span>Cofre 1</span>
+            </button>
+
+            <button class="cofre" id="cofre2" data-cofre="2">
+                <span class="emoji">🎁</span>
+                <span>Cofre 2</span>
+            </button>
+
+            <button class="cofre" id="cofre3" data-cofre="3">
+                <span class="emoji">🎁</span>
+                <span>Cofre 3</span>
+            </button>
+
+        </section>
+
+        <section class="resultado" aria-live="polite">
+            <h2>Resultado da rodada</h2>
+            <p id="mensagem">
+                Escolha um dos cofres para começar!
+            </p>
+        </section>
+
+        <section class="placar">
+
+            <div class="contador">
+                <span>🎯 Tentativas</span>
+                <strong id="tentativas">0</strong>
+            </div>
+
+            <div class="contador">
+                <span>🏆 Vitórias</span>
+                <strong id="vitorias">0</strong>
+            </div>
+
+        </section>
+
+        <div class="acoes">
+
+            <button id="jogarNovamente" class="botao">
+                🔄 Jogar Novamente
+            </button>
+
+            <button id="zerar" class="botao botao-secundario">
+                🗑️ Zerar Contadores
+            </button>
+
+        </div>
+
+        <p class="rodape">
+            💰 Boa sorte, aventureiro!
+        </p>
+
+    </main>
+</body>
+</html>
